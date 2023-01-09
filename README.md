@@ -1,2 +1,5 @@
 # project-restaurant-page
-Using JS alone to generate the entire contents of the website.
+Using JS ES6 modules to generate the contents of the website.
+
+## Live Demo
+[Restaurant Page](https://actuallybarry.github.io/project-restaurant-page/)
