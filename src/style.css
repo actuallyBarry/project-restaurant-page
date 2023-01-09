@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+:root {
+    --main-yellow: hsl(39, 100%, 50%);
+    --home-bgc: hsl(199, 100%, 11%, 0.3);
+    --menu-bgc: hsl(199, 100%, 11%, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url(./clem-onojeg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* =============================================== */
+#header {
+    height: clamp(2rem, 9vh, 6rem);
+    background-color: #00000080;
+    border-bottom: 2px solid var(--main-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 12vw, 6rem);   /** <========= */
+}
+
+#header button {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: clamp(.7rem, 4vw, 1.1rem);
+}
+#header button:hover {
+    border-bottom: 2px solid var(--main-yellow);
+}
+
+/* =============================================== */
+#content {
+    height: 90%;
+    position: relative;
+}
+
+#home {
+    height: 100%;
+    background-color: var(--home-bgc);
+    color: #fff;
+    display: grid;
+    grid-template-rows: 36% min-content 13% 1fr;
+    justify-items: center;
+}
+
+#home h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(1.7rem, 7vw, 4.5rem);
+    color: var(--main-yellow);
+    align-self: end;
+    font-weight: 300;
+    line-height: 50%;
+}
+#home h1 {
+    font-size: clamp(2rem, 10vw, 6rem);
+    border-bottom: 4px solid var(--main-yellow);
+}
+#home p {
+    font-size: clamp(.7rem, 3.5vw, 1.6rem);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#home button {
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--main-yellow);
+    width: clamp(4rem, 16vw, 10rem);
+    aspect-ratio: 10 / 3;
+    font-size: clamp(.6rem, 1.8vw, 1.1rem);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* =============================================== */
+#menu {
+    position: absolute;
+    background-color: var(--menu-bgc);
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: clamp(180px, 70%, 900px);
+    color: #fff;
+    text-align: center;
+    overflow: auto;
+    padding: min(10%, 3rem) min(10%, 4rem);
+}
+@media (min-width: 650px) {
+    #menu::-webkit-scrollbar {
+        width: 5px;
+    }
+    #menu::-webkit-scrollbar-thumb {
+        background: hsla(0, 0%, 70%, 0.4);
+        border-radius: 8px;
+    }
+}
+
+#menu h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(1.5rem, 7vw, 4rem);
+    color: var(--main-yellow);
+    font-weight: 300;
+    line-height: 10%;
+}
+
+#menu h1 {
+    font-size: clamp(1.8rem, 8vw, 5rem);
+}
+
+#menu h3 {
+    font-size: clamp(1rem, 4vw, 2rem);
+    color: var(--main-yellow);
+    margin-bottom: 1vh;
+}
+
+#menu p {
+    font-size: clamp(.7rem, 3vw, 1.4rem);
+}
+
+#menu hr:first-of-type {
+    margin-top: 2vh;
+}
+
+#menu hr {
+    width: max(6rem, 50%);
+    border: 1px solid var(--main-yellow);
+    margin: 4vh auto 3vh;
+}
+
+/* =============================================== */
+#about {
+    position: absolute;
+    background-color: var(--menu-bgc);
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: clamp(180px, 70%, 900px);
+    color: #fff;
+    text-align: center;
+    overflow: auto;
+    padding: min(10%, 3rem) min(10%, 4rem);
+}
+
+#about h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(1.5rem, 7vw, 4rem);
+    color: var(--main-yellow);
+    font-weight: 300;
+    line-height: 10%;
+}
+
+#about h1 {
+    font-size: clamp(1.8rem, 8vw, 5rem);
+}
+
+#about p {
+    font-size: clamp(.7rem, 3vw, 1.4rem);
+    margin-bottom: min(39%, 30vh);
+    text-align: left;
+}
+#about p:last-of-type {
+    font-size: clamp(.5rem, 2.5vw, .9rem);
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--main-yellow);
+}
+#about a {
+    color: var(--main-yellow)
+}
+
+#about hr {
+    width: max(6rem, 50%);
+    border: 1px solid var(--main-yellow);
+    margin: 2vh auto 3vh;
+}
+
+/* =============================================== */
+.hidden {
+    display: none !important;
+}
